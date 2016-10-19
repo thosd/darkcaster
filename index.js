@@ -3,7 +3,7 @@ var cors = require('cors');
 var server = express();
 var logger = require('./middleware/logger.js');
 var axios = require('axios');
-var apiKey = require('./config.js').APIKey;
+var apiKey = require('./config.js').APIKEY;
 //var authorize = require('./middleware/auth.js');
 
 var forecastRouter = require('./routers/forecast.router.js');

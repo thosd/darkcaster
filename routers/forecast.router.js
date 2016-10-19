@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var apiKey = process.env.APIKEY || require('../config.js').APIKey;
+var APIKEY = process.env.APIKEY || require('../config.js').APIKEY;
 var axios = require('axios');
 var authorize = require('../middleware/auth.js');
 var timeoutConfig = {
