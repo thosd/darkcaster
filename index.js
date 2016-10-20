@@ -11,7 +11,7 @@ var indexRouter = require('./routers/index.router.js');
 
 var port = process.env.PORT  || 8080;
 
-server.use(express.static(__dirname + './public'));
+server.use(express.static(__dirname + '/public'));
 server.use(logger);
 server.use(cors());
 
