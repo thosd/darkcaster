@@ -22,6 +22,6 @@ router.get('/forecast/:latitude,:longitude', function(request, response){
 module.exports = router;
 
 function buildForecastURL(latitude, longitude){
-  var url = 'https://api.darksky.net/forecast'+ apiKey +'/' + latitude +','+ longitude;
+  var url = 'https://api.darksky.net/forecast/'+ apiKey +'/' + latitude +','+ longitude;
   return url;
 }
