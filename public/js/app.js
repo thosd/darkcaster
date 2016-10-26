@@ -1,1 +1,3 @@
-alert("JS is working");
+(function() {
+  angular.module('darkcaster', []);  
+}());
