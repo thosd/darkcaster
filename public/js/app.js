@@ -1,3 +1,3 @@
 (function() {
-  angular.module('darkcaster', []);  
+  angular.module('forecast-app', []);  
 }());
