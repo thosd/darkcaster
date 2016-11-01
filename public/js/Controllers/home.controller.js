@@ -6,12 +6,21 @@
 
   function HomeController($scope, WeatherService){
     $scope.getWeather = getWeather;
+    $scope.weather = WeatherService.weatherData;
+    //$scope.log = log;
+
+    $scope.$watch(function(){
+      return WeatherService.weatherData;
+    }, function(newVal, oldVal){
+      $scope.weather = WeatherService.weatherData;
+    });
 
     function getWeather(latitude, longitude){
-    WeatherService.getWeather(latitude, longitude)
-      .then(function(response){
-        $scope.weather = response.data;
-      });
+        WeatherService.getWeather(latitude, longitude);
     }
+    //function log(){
+    //  console.log(WeatherService.weatherData);
+
+    //}
   }
 }());

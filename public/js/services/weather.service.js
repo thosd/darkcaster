@@ -9,22 +9,30 @@
     var secretToken = {
       secret: 'its a secret'
     };
-    var latitude;
-    var longitude;
-    var weatherData = [];
-    return {
-      weatherData: weatherData,
-      getWeather: getWeather
-    };
+    var lat;
+    var long;
+    var service = {};
+    service.weatherData = [];
+    service.getWeather = getWeather;
+    return service;
+
+    //var weatherData = [];
+    //return {
+    //  weatherData: weatherData,
+    //  getWeather: getWeather
+    //};
 
     function getWeather(latitude, longitude){
-      latitude = latitude;
-      longitude = longitude;
+      lat = latitude;
+      long = longitude;
       var config = {
         headers: secretToken
       };
       var url= '/forecast/'+ latitude + ',' + longitude;
-      return $http.get(url, config);
+      return $http.get(url, config)
+                  .then(function(response){
+                    service.weatherData = response.data;
+                  });
     }
   }
 }());

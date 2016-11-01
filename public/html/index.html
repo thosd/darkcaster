@@ -31,6 +31,7 @@
             <h3>{{ weather.currently.summary }}</h3>
           </div>
           <div class="col-md-2">
+            <!--the following uses  -->
             <strong>{{ weather.currently.time * 1000 | date:"short"}}</strong>
           </div>
         </div>
@@ -43,6 +44,17 @@
           </div>
         </div>
       </div>
+      <!-- <button ng-click="log()">LOG</button> -->
+    </div>
+    <!--the above is for current weather only  -->
+    <div ng-controller="MinutelyController">
+
+    </div>
+    <div ng-controller="HourlyController">
+
+    </div>
+    <div ng-controller="DailyController">
+
     </div>
   </div>
 
