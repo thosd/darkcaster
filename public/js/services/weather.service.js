@@ -9,8 +9,8 @@
     var secretToken = {
       secret: 'its a secret'
     };
-    var lat;
-    var long;
+    //var lat;
+    //var long;
     var service = {};
     service.weatherData = [];
     service.getWeather = getWeather;
@@ -23,8 +23,8 @@
     //};
 
     function getWeather(latitude, longitude){
-      lat = latitude;
-      long = longitude;
+      service.lat = latitude;
+      service.lon = longitude;
       var config = {
         headers: secretToken
       };
