@@ -10,10 +10,11 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
  </head>
  <body>
+   <div class="overlay"></div>
    <header id="main-header">
-     <h1>
-      Weather Forecast
-     </h1>
+      <div class="logo">
+        The Weather Application
+      </div>
    </header>
 
    <div class="container">
@@ -25,7 +26,7 @@
       <div ng-show='weather.currently'>
         <div class="row">
           <div class="col-md-1">
-            <img ng-src="images/{{weather.currently.icon}}.png" class="img-responsive" alt="{{weather.currently.icon}}">
+            <img ng-src="images/weather-icons/{{weather.currently.icon}}.png" class="img-responsive" alt="{{weather.currently.icon}}">
           </div>
           <div class="col-md-9">
             <h3>{{ weather.currently.summary }}</h3>
@@ -67,6 +68,7 @@
 
     </div>
   </div>
+
 
 
 
